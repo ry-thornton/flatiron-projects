@@ -46,3 +46,16 @@
   padding-top: 30vh;
   font-family: 'Roboto', sans-serif;
 }
+
+.Home-page{
+  height: 100vh
+}
+
+.Project-page{
+  height: 100vh;
+  background-color: lightgray;
+}
+
+.Signup-form{
+  padding-top: 20vh;
+}
