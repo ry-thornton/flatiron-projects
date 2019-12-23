@@ -10,8 +10,9 @@ class Menu extends React.Component {
                 <Nav>
                     <Nav.Link>Projects</Nav.Link>
                     <Nav.Link>About</Nav.Link>
-                    <Nav.Link>Members</Nav.Link>
+                    <Nav.Link>Members</Nav.Link>                    
                 </Nav>
+                {this.props.username ? <Navbar.Collapse className="justify-content-end"><Navbar.Text>Signed in as: {this.props.username} </Navbar.Text></Navbar.Collapse>: null }
             </Navbar>
         )
     }

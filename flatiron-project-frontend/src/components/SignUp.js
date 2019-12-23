@@ -14,11 +14,16 @@ class SignUp extends React.Component{
         console.log(this.state)
     }
 
+    submitHandler = (event) => {
+        event.preventDefault()
+        this.props.signIn(this.state.username)
+    }
+
     render(){
         return (
             <div className="Signup-form">
                 Sign Up
-                <form>
+                <form onSubmit={this.submitHandler}>
                     <input type="text" name="username" placeholder="Username" onChange={this.changeHandler}/>
                     <br/>
                     <br/>

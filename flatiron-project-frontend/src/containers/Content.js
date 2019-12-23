@@ -2,22 +2,16 @@ import React from 'react'
 import SignUp from '../components/SignUp'
 
 class Content extends React.Component{
-    state = {
-        showing: null
-    }
     //Based on state in content, component will return different
     //content (eg. Home, Projects)
 
-    signUp = () => {
-        this.setState({showing: 'signup'})
-    }
 
     render(){
         return (
             <div>
-            { this.state.showing ? 
+            { this.props.showing ? 
             <div>
-                <SignUp/>
+                <SignUp signIn={this.props.signIn}/>
             </div>
             :
             <div>
@@ -28,7 +22,10 @@ class Content extends React.Component{
                         <span>A platform for innovation</span>
                     </div>
                     <br/>
-                    <button onClick={this.signUp}>Sign Up</button>
+                    { this.props.username ?
+                    <button onClick={this.props.logout}>Logout</button>
+                    :
+                    <button onClick={this.props.signUp}>Sign Up</button>}
                 </div>
                 <div className="Project-page">
 
