@@ -16,8 +16,22 @@ class SignUp extends React.Component{
 
     submitHandler = (event) => {
         event.preventDefault()
-        this.props.signIn(this.state.username)
+        this.createNewUser()
+        //this.props.signIn(this.state.username)
     }
+
+    createNewUser = () => {
+        fetch('http://localhost:3000/users', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(this.state)
+        })
+        .then(response => response.json())
+        .then(data => this.props.signIn(data["username"]))
+    }
+
 
     render(){
         return (

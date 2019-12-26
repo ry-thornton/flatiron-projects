@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  color: white;
+  background-color: #2B3A67;
 }
 
 .App-logo {
@@ -48,7 +50,8 @@
 }
 
 .Home-page{
-  height: 100vh
+  height: 100vh;
+  background-color: #2B3A67;
 }
 
 .Project-page{
@@ -58,4 +61,5 @@
 
 .Signup-form{
   padding-top: 20vh;
+  height: 100vh;
 }
