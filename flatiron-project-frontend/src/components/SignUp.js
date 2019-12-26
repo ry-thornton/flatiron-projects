@@ -17,7 +17,7 @@ class SignUp extends React.Component{
     submitHandler = (event) => {
         event.preventDefault()
         this.createNewUser()
-        //this.props.signIn(this.state.username)
+
     }
 
     createNewUser = () => {

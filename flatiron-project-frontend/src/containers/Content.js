@@ -1,5 +1,6 @@
 import React from 'react'
 import SignUp from '../components/SignUp'
+import ProjectForm from '../components/ProjectForm.js'
 
 class Content extends React.Component{
     //Based on state in content, component will return different
@@ -28,6 +29,8 @@ class Content extends React.Component{
                     <button onClick={this.props.signUp}>Sign Up</button>}
                 </div>
                 <div className="Project-page">
+                    <ProjectForm/>
+    
 
                 </div>
             </div> 
