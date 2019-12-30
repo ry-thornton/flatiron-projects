@@ -12,7 +12,7 @@ class Content extends React.Component{
             case 'login':
                 return (
                     <div>
-                        <Login signIn={this.props.signIn}/>
+                        <Login signIn={this.props.signIn} signUp={this.props.signUp}/>
                     </div>
                 );
             case 'signup':

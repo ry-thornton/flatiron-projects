@@ -2,6 +2,7 @@
   text-align: center;
   color: white;
   background-color: #2B3A67;
+  font-family: 'Source Code Pro', monospace;
 }
 
 .App-logo {
@@ -46,7 +47,7 @@
 
 .Home-page-greeting{
   padding-top: 30vh;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Source Code Pro', monospace;
 }
 
 .Home-page{

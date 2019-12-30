@@ -15,6 +15,7 @@ class Login extends React.Component{
         this.props.signIn(this.state.username)
     }
 
+
     render(){
         return (
             <div className="Login-form">
@@ -28,6 +29,7 @@ class Login extends React.Component{
                     <br/>
                     <input type="submit" value="Login"/>
                 </form>
+                Don't have an account? <span onClick={this.props.signUp}>Sign Up</span>
             </div>
         )
     }
