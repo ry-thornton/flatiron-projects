@@ -12,7 +12,7 @@ class Menu extends React.Component {
                     <Nav.Link>About</Nav.Link>
                     <Nav.Link>Members</Nav.Link>                    
                 </Nav>
-                {this.props.username ? <Navbar.Collapse className="justify-content-end"><Navbar.Text>Signed in as: {this.props.username} </Navbar.Text></Navbar.Collapse>: null }
+                {this.props.username ? <Navbar.Collapse className="justify-content-end"><Navbar.Text>Signed in as: {this.props.username} </Navbar.Text></Navbar.Collapse>: <Navbar.Collapse className="justify-content-end"><button onClick={this.props.login}>Login</button></Navbar.Collapse> }
             </Navbar>
         )
     }

@@ -15,18 +15,28 @@ class ProjectForm extends React.Component{
     submitHandler = (event) => {
         event.preventDefault()
         console.log(this.state)
+        fetch('https://localhost:3000/projects', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(this.state)
+        })
+        .then(response => response.json())
+        .then(data => alert(data))
     }
     render(){
         return(
             <div className="Project-form">
             <form onSubmit={this.submitHandler}>
-                Post a Project!
+                Upload a Project!
                 <br/>
                 <br/>
                 <input type="text" name="name" placeholder="Name" onChange={this.changeHandler}/>
                 <br/>
                 <br/>
-                <input type="url" name="url" placeholder="Url" onChange={this.changeHandler}/>
+                <input type="text" name="url" placeholder="Url" onChange={this.changeHandler}/>
                 <br/>
                 <br/>
                 <textarea onChange={this.changeHandler} name="description">Description</textarea>

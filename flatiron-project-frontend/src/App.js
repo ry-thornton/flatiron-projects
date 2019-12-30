@@ -12,6 +12,9 @@ class App extends React.Component{
     username: null
   }
 
+  login = () => {
+    this.setState({showing: "login"})
+  }
   signUp = () => {
     this.setState({showing: "signup"})
   }
@@ -25,7 +28,7 @@ class App extends React.Component{
   render(){
         return (
         <div className="App">
-          <Menu username={this.state.username}/>
+          <Menu username={this.state.username} login={this.login} />
           <Content showing={this.state.showing} signUp={this.signUp} signIn={this.signIn} username={this.state.username} logout={this.logOut}/>
         </div>
       );
