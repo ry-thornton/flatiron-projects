@@ -23,7 +23,10 @@ class App extends React.Component{
     this.setState({showing: "signup"})
   }
   signIn = (username) => {
-    this.setState({showing: null, username: username})
+    fetch(`http://localhost:3000/users`)
+    .then(response => response.json())
+    .then(users => users.find(user => user.username === username))
+    .then(foundUser => this.setState({showing: null, username: foundUser.username}))
   }
   logOut = () => {
     this.setState({username: null})
