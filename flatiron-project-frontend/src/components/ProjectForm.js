@@ -15,7 +15,11 @@ class ProjectForm extends React.Component{
     submitHandler = (event) => {
         event.preventDefault()
         console.log(this.state)
-        fetch('https://localhost:3000/projects', {
+        this.createProject()
+    }
+
+    createProject = () => {
+        fetch('http://localhost:3000/projects', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
