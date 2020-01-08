@@ -25,7 +25,7 @@ class Content extends React.Component{
             case 'profile':
                 return (
                     <div>
-                        <Profile/>
+                        <Profile user={this.props.user}/>
                     </div>
                 );
             default:
