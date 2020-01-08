@@ -21,6 +21,12 @@ class Content extends React.Component{
                         <SignUp signIn={this.props.signIn}/>
                     </div>
                 );
+            case 'profile':
+                return (
+                    <div>
+                        Profile
+                    </div>
+                );
             default:
                 return (
                     <div>

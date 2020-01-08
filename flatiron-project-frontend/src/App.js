@@ -32,10 +32,16 @@ class App extends React.Component{
     this.setState({username: null})
   }
 
+  // When showProfile is clicked it will changing showing to profile 
+  //changing content component to show profile page with user info and projects
+  showProfile = () => {
+    this.setState({showing: "profile"})
+  }
+
   render(){
         return (
         <div className="App">
-          <Menu username={this.state.username} login={this.login} home={this.home}/>
+          <Menu username={this.state.username} login={this.login} home={this.home} showProfile={this.showProfile}/>
           <Content showing={this.state.showing} signUp={this.signUp} signIn={this.signIn} username={this.state.username} logout={this.logOut}/>
         </div>
       );

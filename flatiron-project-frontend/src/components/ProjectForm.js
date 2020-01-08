@@ -43,7 +43,7 @@ class ProjectForm extends React.Component{
                 <input type="text" name="url" placeholder="Url" onChange={this.changeHandler}/>
                 <br/>
                 <br/>
-                <textarea onChange={this.changeHandler} name="description">Description</textarea>
+                <input type="text" name="description" placeholder="Description" onChange={this.changeHandler}/>
                 <br/>
                 <br/>
                 <input type="submit" value="Submit"/>

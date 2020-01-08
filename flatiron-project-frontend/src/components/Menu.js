@@ -4,6 +4,7 @@ import Nav from 'react-bootstrap/Nav'
 
 class Menu extends React.Component {
 
+
     render(){
         return (
             <Navbar bg='light' variant='light'>
@@ -13,7 +14,7 @@ class Menu extends React.Component {
                     <Nav.Link>About</Nav.Link>
                     <Nav.Link>Members</Nav.Link>                    
                 </Nav>
-                {this.props.username ? <Navbar.Collapse className="justify-content-end"><Navbar.Text>Signed in as: {this.props.username} </Navbar.Text></Navbar.Collapse>: <Navbar.Collapse className="justify-content-end"><button onClick={this.props.login}>Login</button></Navbar.Collapse> }
+                {this.props.username ? <Navbar.Collapse className="justify-content-end"><Navbar.Text>Signed in as: <span onClick={this.props.showProfile}>{this.props.username}</span> </Navbar.Text></Navbar.Collapse>: <Navbar.Collapse className="justify-content-end"><button onClick={this.props.login}>Login</button></Navbar.Collapse> }
             </Navbar>
         )
     }
