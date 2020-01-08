@@ -73,3 +73,15 @@
   padding-top: 20vh;
   height: 100vh;
 }
+
+.Profile-page{
+  padding-top: 20vh;
+  height: 100vh;
+}
+
+.Profile-page-header{
+  background-color: white;
+  color: gray;
+  width: 70vw;
+  margin: 0 auto;
+}

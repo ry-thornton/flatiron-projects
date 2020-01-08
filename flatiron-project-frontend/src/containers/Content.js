@@ -2,6 +2,7 @@ import React from 'react'
 import SignUp from '../components/SignUp'
 import ProjectForm from '../components/ProjectForm.js'
 import Login from '../components/Login.js'
+import Profile from '../components/Profile.js'
 
 class Content extends React.Component{
     //Based on state in content, component will return different
@@ -24,7 +25,7 @@ class Content extends React.Component{
             case 'profile':
                 return (
                     <div>
-                        Profile
+                        <Profile/>
                     </div>
                 );
             default:
