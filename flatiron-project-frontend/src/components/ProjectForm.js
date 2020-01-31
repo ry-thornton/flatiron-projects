@@ -4,8 +4,7 @@ class ProjectForm extends React.Component{
     state={
         name: "",
         url: "",
-        description: ""
-
+        description: "",
     }
 
     changeHandler = (event) => {
@@ -25,7 +24,12 @@ class ProjectForm extends React.Component{
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(this.state)
+            body: JSON.stringify({
+                name: this.state.name,
+                url: this.state.url,
+                description: this.state.description,
+                user_id: this.props.user.id
+            })
         })
         .then(response => response.json())
         .then(data => alert(data))

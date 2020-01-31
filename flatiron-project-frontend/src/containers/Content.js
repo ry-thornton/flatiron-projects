@@ -44,7 +44,7 @@ class Content extends React.Component{
                                 <button onClick={this.props.signUp}>Sign Up</button>}
                         </div>
                         <div className="Project-page">
-                            <ProjectForm/>
+                            <ProjectForm user={this.props.user}/>
             
         
                         </div>
